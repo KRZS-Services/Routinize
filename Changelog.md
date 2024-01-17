@@ -4,3 +4,6 @@ Welcome to Routinize - Achieve your dreams!
 - Initial release
 ## Version 1.1 [Link](https://github.com/KRZS-Services/Routinize/tree/4b8fa62017f1ea5e70903135c109091c370b28a2)
 - Added better mobile support
+#### *1.1.1 Small Fix*
+___
+- Fixed a caching issue
