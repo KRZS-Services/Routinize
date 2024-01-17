@@ -28,11 +28,13 @@ body, html {
     display: none;
     align-items: center;
     padding: 100px;
+    overflow: hidden;
 }
 .intro .introcard {
     animation-fill-mode: forwards;
     display: none;
     width: 50%;
+    flex-direction: column;
 }
 .intro .introtext {
     color: white;
@@ -142,8 +144,6 @@ body, html {
     width: fit-content;
 }
 .box {
-    width: calc(100% /7 - 120px);
-    flex-basis: calc(100% / 7 - 120px);
     height: fit-content;
     aspect-ratio: 1 / 1;
     background: rgba(0,0,0,0.5);
@@ -310,5 +310,80 @@ body, html {
     }
     0% {
         transform: scale(1);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .intro .introtext {
+        font-size: 35px;
+    }
+    .intro .introcard {
+        width: calc(100% - 100px);
+        height: calc(100% - 100px);
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        justify-content: center;
+    }
+    @keyframes slideout {
+        from {
+            transform: translateY(0);
+            opacity: 100%;
+        }
+        to {
+            transform: translateY(-100%);
+            opacity: 0%;
+        }
+    }
+    @keyframes slidein {
+        from {
+            transform: translateY(100%);
+            opacity: 0%;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .box {
+        width: calc(100% - 120px);
+        flex-basis: calc(100% - 120px);
+    }
+}
+@media only screen and (min-width: 500px) {
+    .box {
+        width: calc(100% / 2 - 120px);
+        flex-basis: calc(100% / 2 - 120px);
+    }
+}
+@media only screen and (min-width: 600px) {
+    .box {
+        width: calc(100% / 3 - 120px);
+        flex-basis: calc(100% / 3 - 120px);
+    }
+}
+@media only screen and (min-width: 800px) {
+    .box {
+        width: calc(100% / 4 - 120px);
+        flex-basis: calc(100% / 4 - 120px);
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .box {
+        width: calc(100% / 5 - 120px);
+        flex-basis: calc(100% / 5 - 120px);
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .box {
+        width: calc(100% / 6 - 120px);
+        flex-basis: calc(100% / 6 - 120px);
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .box {
+        width: calc(100% / 7 - 120px);
+        flex-basis: calc(100% / 7 - 120px);
     }
 }

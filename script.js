@@ -1,7 +1,7 @@
 function introNext() {
     document.getElementById("intro" + IntroI).style.animation = "ease-out slideout 2s";
     setTimeout(function () { document.getElementById("intro" + (IntroI - 1)).style.display = "none" }, 2000);
-    document.getElementById("intro" + (IntroI + 1)).style.display = "initial";
+    document.getElementById("intro" + (IntroI + 1)).style.display = "flex";
     document.getElementById("intro" + (IntroI + 1)).style.animation = "ease-out slidein 2s";
     IntroI = IntroI + 1;
 }
@@ -80,7 +80,7 @@ function showItems() {
 if (localStorage.getItem("completedIntro") != "true") {
     IntroI = 1;
     document.getElementById("intro").style.display = "flex";
-    document.getElementById("intro" + IntroI).style.display = "initial";
+    document.getElementById("intro" + IntroI).style.display = "flex";
 } else {
     document.getElementById("content").style.display = "flex";
     showItems();
