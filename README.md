@@ -1,5 +1,5 @@
 # Welcome to Routinize!
-This is the official code repository for Routinize. ** Routinize is a part of the KRZS LoS (Line of Services). Visit our website at https://krzs.xyz.**
+This is the official code repository for Routinize. **Routinize is a part of the KRZS LoS (Line of Services). Visit our website at https://krzs.xyz.**
 
 Looking for the changelog? https://github.com/KRZS-Services/Routinize/blob/main/Changelog.md
 
