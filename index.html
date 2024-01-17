@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <meta property="og:title" content="Routinize" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://routinize.krzs.xyz" />
+        <meta property="og:description" content="Routinize - Achieve your dreams" />
+        <meta name="theme-color" content="#4e07a6">
+        <meta charset="UTF-8">
+        <meta name="description" content="Routinize - Achieve your dreams">
+        <meta name="keywords" content="routine, habit, krzs, routinize">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Routinize</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <div class="intro" id="intro">
+            <div id="intro1" class="introcard">
+                <div class="introtext">It takes 66 days to form a habit</div>
+                <button class="introbutton" onclick="introNext(); event.target.disabled = true; setTimeout(function () { document.getElementById('introb2').disabled = false }, 2000)">Next</button>
+            </div>
+            <div id="intro2" class="introcard">
+                <div class="introtext">But it doesn't have to be that way</div>
+                <button class="introbutton" disabled onclick="introNext(); event.target.disabled = true; setTimeout(function () { document.getElementById('introb3').disabled = false }, 2000)" id="introb2">Next</button>
+            </div>
+            <div id="intro3" class="introcard">
+                <div class="introtext">Achieve your goals faster with Routinize</div>
+                <button class="introbutton" disabled onclick="introNext(); event.target.disabled = true; setTimeout(function () { document.getElementById('introb4').disabled = false; document.getElementById('daysinput').focus() }, 2000);" id="introb3">Start</button>
+            </div>
+            <div id="intro4" class="introcard">
+                <form onsubmit="event.preventDefault(); introNext(); document.getElementById('introb4').disabled = true; setTimeout(function () { document.getElementById('introb5').disabled = false; document.getElementById('nameinput').focus() }, 2000);">
+                    <div class="introtext">Set a goal</div>
+                    <input placeholder="How many days will it take for you to reach your goal?" required type="number" min="1" pattern="[0-9]" class="input introinput" id="daysinput" />
+                    <button class="introbutton" disabled type="submit" id="introb4">Next</button>
+                </form>
+            </div>
+            <div id="intro5" class="introcard">
+                <form onsubmit="event.preventDefault(); introNext(); document.getElementById('introb5').disabled = true;">
+                    <div class="introtext">Set a name</div>
+                    <input placeholder="What are you trying to achieve?" required type="text" class="input introinput" id="nameinput" />
+                    <button class="introbutton" disabled type="submit" id="introb5">Next</button>
+                </form>
+            </div>
+            <div id="intro6" class="introcard">
+                <div class="introtext">Setup is complete!</div>
+                <button class="introbutton" onclick="introEnd();">Get started</button>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <span class="header" id="header">Routinize</span>
+            <div class="boxes" id="boxes"></div>
+        </div>
+        <div class="overlay" id="modaloverlay">
+            <div class="modal" id="goalquestioner">
+                <span class="modalhead">Did you achieve your goal today?</span>
+                <span class="modaltext">If you didn't, that's okay! There's always tomorrow.</span>
+                <div class="buttongroup">
+                    <button class="button" style="background-color: rgba(0,150,0)" onclick="closeModal(true); completeDay(true)">Yes</button>
+                    <button class="button" style="background-color: rgba(150,0,0)" onclick="closeModal(false); completeDay(false)">No</button>
+                </div>
+            </div>
+            <div class="modal" id="tracksetter">
+                <span class="modaltext">You stayed on track</span>
+                <span class="modalhead" id="percentcomplete"> 0%</span>
+                <span class="modaltext">of the time. Keep up the good work!</span>
+                <div class="buttongroup">
+                    <button class="button" style="background-color: rgba(150,0,0)" onclick="closeModal(true); retryProject()">Retry</button>
+                    <button class="button" onclick="closeModal(false); resetAll();">Finish</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/script.js"></script>
+</html>
