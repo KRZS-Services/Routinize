@@ -435,15 +435,15 @@ body, html {
 .option::after {
     content: "arrow_forward_ios";
     font-family: "Material Symbols Rounded";
-    font-size: 14px;
-    margin-left: 2px;
-    transition: margin-left 0.3s;
+    font-size: 25px;
+    transition: transform 0.3s;
+    float: right;
 }
 .option:hover:after {
-    margin-left: 6px;
+    transform: translateX(5px);
 }
 .option:active:after {
-    margin-left: 1px;
+    transform: translateX(-10px);
 }
 @media only screen and (max-width: 500px) {
     .options {
