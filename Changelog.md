@@ -9,3 +9,6 @@ ___
 - Fixed a caching issue
 ## Version 1.2 [Link](https://github.com/KRZS-Services/Routinize/tree/f63d8b6cc4dceabadb90ac5a87c609ec43fef2c3)
 - Added the goal menu. *could this be a hint to something new?*
+#### *1.2.1 Small Fix*
+___
+- Fixed a caching issue
