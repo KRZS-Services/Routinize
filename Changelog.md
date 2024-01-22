@@ -16,3 +16,6 @@ ___
 - Fixed the goal completion menu being displayed when clicking a failed day
 ## Version 1.3 [Link](https://github.com/KRZS-Services/Routinize/tree/f63d8b6cc4dceabadb90ac5a87c609ec43fef2c3)
 - The arrow on the goal menu is bigger and on the right
+#### *1.3.1 Small Fix*
+___
+- Fixed a caching issue
