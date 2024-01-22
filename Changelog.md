@@ -12,3 +12,5 @@ ___
 #### *1.2.1 Small Fix*
 ___
 - Fixed a caching issue
+#### *1.2.2 Small Fix*
+- Fixed the goal completion menu being displayed when clicking a failed day

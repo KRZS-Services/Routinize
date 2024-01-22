@@ -49,7 +49,7 @@ function showItems() {
         newdiv.textContent = index+1;
         newdiv.classList.add("box");
         newdiv.onclick = function () {
-            if (!event.target.classList.contains("complete") && !event.target.classList.contains("later")) {
+            if (!event.target.classList.contains("complete") && !event.target.classList.contains("failed") && !event.target.classList.contains("later")) {
                 openModal("goalquestioner");
             }
         }
