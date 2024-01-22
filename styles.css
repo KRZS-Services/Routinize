@@ -387,3 +387,69 @@ body, html {
         flex-basis: calc(100% / 7 - 120px);
     }
 }
+.goalmenu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(30deg, #000000, #591182);
+    background-position: center;
+    background-size: 100%;
+    display: none;
+    overflow: auto;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s;
+}
+.options {
+    border-radius: 10px;
+    width: 75%;
+    transition: all 0.3s;
+}
+.option {
+    width: calc(100% - 40px);
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    font-family: "M PLUS Rounded 1c";
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-top: -1px;
+    transition: all 0.3s;
+    text-align: left;
+}
+.option:hover {
+    background: rgba(255,255,255,0.05);
+}
+.option:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.option:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.option::after {
+    content: "arrow_forward_ios";
+    font-family: "Material Symbols Rounded";
+    font-size: 14px;
+    margin-left: 2px;
+    transition: margin-left 0.3s;
+}
+.option:hover:after {
+    margin-left: 6px;
+}
+.option:active:after {
+    margin-left: 1px;
+}
+@media only screen and (max-width: 500px) {
+    .options {
+        width: 100%;
+    }
+    .option {
+        border-radius: 0 !important;
+    }
+}

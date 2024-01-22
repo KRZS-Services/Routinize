@@ -74,6 +74,8 @@ function showItems() {
         document.getElementById("percentcomplete").textContent = Math.round(100 - (100 * JSON.parse(localStorage.getItem("FailedDays")).contentvalue.length) / localStorage.getItem("GoalDays")) + "%";
     }
     document.getElementById("intro").style.display = "none";
+    document.getElementById("goalmenu").style.opacity = "0%";
+    setTimeout(function () {document.getElementById("goalmenu").style.display = "none"}, 1000);
     document.getElementById("header").textContent = localStorage.getItem("GoalName");
     document.getElementById("content").style.display = "block";
 }
@@ -82,8 +84,8 @@ if (localStorage.getItem("completedIntro") != "true") {
     document.getElementById("intro").style.display = "flex";
     document.getElementById("intro" + IntroI).style.display = "flex";
 } else {
-    document.getElementById("content").style.display = "flex";
-    showItems();
+    document.getElementById("mainoption").textContent = localStorage.getItem("GoalName");
+    document.getElementById("goalmenu").style.display = "flex";
 }
 function lastSibling(node) {
     var tempObj = node.parentNode.lastChild; 

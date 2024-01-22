@@ -7,3 +7,5 @@ Welcome to Routinize - Achieve your dreams!
 #### *1.1.1 Small Fix*
 ___
 - Fixed a caching issue
+## Version 1.2
+- Added the goal menu. *could this be a hint to something new?*
